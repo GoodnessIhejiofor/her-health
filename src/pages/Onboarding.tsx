@@ -3,7 +3,6 @@ import { Box, Button, Flex } from "@chakra-ui/react";
 import { InsuranceSelection, LocationSelection, OnboardingForm, PaymentSelection } from "../components/pages/auth";
 import LoadingOverlay, { CustomButton } from "../components/common/common";
 
-// Define the steps as components
 const steps = [
     { id: "step1", component: <OnboardingForm /> },
     { id: "step2", component: <InsuranceSelection /> },
@@ -38,29 +37,23 @@ export default function Onboarding() {
 
     return (
         <Box
-            w={{ base: "90%", md: "700px" }}
-            h="600px"
+            w={{ base: "full", md: "700px" }}
+            h={{ base: '660px', md: '600px' }}
             mx="auto"
-            mt={20}
             p={6}
             boxShadow="lg"
             borderRadius="md"
             bg="#fff"
             display="flex"
             flexDirection="column"
-            justifyContent="space-between" // Ensures spacing between steps and buttons
+            justifyContent="space-between"
             position="relative"
         >
             <LoadingOverlay loading={loadingStep} />
-            {/* Step Content */}
-            <Flex flex="1"
-            // justify="center" 
-            // align="center"
-            >
+            <Flex flex="1">
                 {steps[currentStep].component}
             </Flex>
 
-            {/* Navigation Buttons (Stuck to Bottom) */}
             <Flex justify="space-between" mt={4} pt={4} borderTop="1px solid #E2E8F0">
                 <Button onClick={prevStep} isDisabled={currentStep === 0} colorScheme="gray">
                     Back
