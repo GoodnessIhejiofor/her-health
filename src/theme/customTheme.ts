@@ -14,7 +14,7 @@ const customTheme = extendTheme({
     Text: {
       baseStyle: {
         width: 'full',
-        fontFamily: "Poppins", // Changed "FontFace" to "fontFamily"
+        fontFamily: "Inter", // Changed "FontFace" to "fontFamily"
       },
       Heading: {
         baseStyle: {
