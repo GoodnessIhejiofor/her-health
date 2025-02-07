@@ -1,7 +1,6 @@
-import { Button, ButtonProps, Text, TextProps, Box, Flex } from "@chakra-ui/react";
+import { Button, ButtonProps, Text, TextProps, Box } from "@chakra-ui/react";
 import React from "react";
 import FadeLoader from "react-spinners/FadeLoader";
-
 
 export const CustomButton: React.FC<ButtonProps> = ({ children, ...props }) => {
     return (

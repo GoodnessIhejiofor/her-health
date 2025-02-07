@@ -16,7 +16,6 @@ import {
 } from "@chakra-ui/react";
 import { CustomButton, CustomText } from "../common/common";
 import { BiLogoMastercard, BiLogoVisa } from "react-icons/bi";
-import { SiAmericanexpress } from "react-icons/si";
 
 const AuthForm = () => {
     const [formData, setFormData] = useState({
@@ -35,10 +34,13 @@ const AuthForm = () => {
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
         console.log("Submitted Data:", formData);
+        setTimeout(() => {
+            window.location.assign('onboarding')
+        }, 3000)
     };
 
     return (
-        <Box w={{ base: "90%", md: "400px" }} mx="auto" mt={20} p={6} boxShadow="lg" borderRadius="md" bg="#fff">
+        <Box w={{ base: "90%", md: "500px" }} mx="auto" mt={20} p={6} boxShadow="lg" borderRadius="md" bg="#fff">
 
             <Circle borderRadius={"full"}>
                 <Image src="./logo.jpg" width={"100px"} borderRadius={"inherit"} />
