@@ -1,5 +1,5 @@
 # Her Health Project
-# Author: [Goodness Ihejiofor]
+## Author: [Goodness Ihejiofor]
 
 ## Description:
 This project (HER HEALTH) is designed to provide a comprehensive health management system for Women to monitor and manage Female related diseases. It aims to utilize technology to close the gender sap in healthcare for women in Nigerian communities through a Health Management applications that monitors, and consult for female-related diseases, reducing the incidence of preventable deaths.
@@ -18,7 +18,7 @@ This project (HER HEALTH) is designed to provide a comprehensive health manageme
 
 ## Setting Up the Environment and the Project
 
-### Prerequisites
+### Install/must haves
 - Visual studio code (for backend)
 - Node.js
 - React.js (for the frontend)
@@ -43,9 +43,8 @@ env
 DB
 PORT
 DB_Test
-JWT_SECRET
 
-Run database migrations and seeders:
+Run database migrations:
 
 
 ```bash
@@ -82,10 +81,11 @@ Screen shot of some app interfaces
 
 ![alt text](image-2.png)
 ![alt text](image-1.png)
-![alt text](image-3.png)
+<!-- ![alt text](image-3.png) -->
 ![alt text](image.png)
 
-Deployment Plan (In-view)
+### Deployment Plan (In-view)
+
 Deployment will be done via netlify after testing and continous integration is done.
 
 
