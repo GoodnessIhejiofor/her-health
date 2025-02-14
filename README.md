@@ -1,5 +1,96 @@
 # Her Health Project
-# React + TypeScript + Vite
+# Author: [Goodness Ihejiofor]
+
+## Description:
+This project (HER HEALTH) is designed to provide a comprehensive health management system for Women to monitor and manage Female related diseases. It aims to utilize technology to close the gender sap in healthcare for women in Nigerian communities through a Health Management applications that monitors, and consult for female-related diseases, reducing the incidence of preventable deaths.
+
+## Features:
+1. User Registration and Login
+2. Disease Monitoring and Consultation
+3. Health Tips and Advice
+4. User Profile Management
+5. Insurance and checkup scheduling
+6. User Support and Feedback 
+
+## 🔗 GitHub Repositories
+- **Backend Repository**: (https://github.com/GoodnessIhejiofor/her-health.git)
+- **Frontend Repository**:(https://github.com/GoodnessIhejiofor/her-health.git)
+
+## Setting Up the Environment and the Project
+
+### Prerequisites
+- Visual studio code (for backend)
+- Node.js
+- React.js (for the frontend)
+- Docker (for containerization - in view)
+
+### Backend 
+1. Clone the backend repository:
+   ```bash
+   git clone https://github.com/GoodnessIhejiofor/her-health.git
+   cd her-health
+   ```
+
+2. Install dependencies:
+
+```bash
+npm install
+```
+
+Create a .env file in the root directory for env variables
+
+env
+DB
+PORT
+DB_Test
+JWT_SECRET
+
+Run database migrations and seeders:
+
+
+```bash
+npm run start
+npm run migrate
+npm run seed
+```
+
+### Frontend 
+Clone the frontend repository:
+
+```bash
+git clone https://github.com/GoodnessIhejiofor/her-health.git
+cd her-health
+```
+
+Install dependencies:
+
+
+```bash
+npm install
+```
+Create a .env file 
+
+Start react development server:
+
+```bash
+npm run dev
+```
+Open the app in your browser at http://localhost:5173.
+
+Designs
+Screen shot of some app interfaces
+
+![alt text](image-2.png)
+![alt text](image-1.png)
+![alt text](image-3.png)
+![alt text](image.png)
+
+Deployment Plan (In-view)
+Deployment will be done via netlify after testing and continous integration is done.
+
+
+
+<!-- # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
@@ -48,4 +139,4 @@ export default tseslint.config({
     ...react.configs['jsx-runtime'].rules,
   },
 })
-```
+``` -->
