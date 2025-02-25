@@ -4,4 +4,4 @@ export default function Dashboard() {
     return (
         <MainContent />
     )
-}
+} 
