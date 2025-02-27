@@ -5,7 +5,7 @@ import LoadingOverlay, { CustomButton, CustomText } from "../components/common/c
 export default function HealthProfile() {
     const [responses, setResponses] = useState<Record<string, string>>({});
     const [loading, setLoading] = useState(false);
-    const [error, setError] = useState("");
+    // const [error, setError] = useState("");
     const toast = useToast();
 
     const API_URL = `${import.meta.env.VITE_API_URL}/api/onboarding/health-profile`;
@@ -18,10 +18,10 @@ export default function HealthProfile() {
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
         setLoading(true);
-        setError("");
+        // setError("");
 
         if (!accessToken) {
-            setError("Unauthorized: Please log in again.");
+            // setError("Unauthorized: Please log in again.");
             return;
         }
 
@@ -61,7 +61,7 @@ export default function HealthProfile() {
                 window.location.assign('/insurance')
             }, 3000)
         } catch (err: any) {
-            setError(err.message);
+            // setError(err.message);
             toast({
                 title: "Error",
                 description: err.message,

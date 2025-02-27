@@ -6,17 +6,17 @@ export default function LocationSelection() {
     const toast = useToast();
     const [selectedLocation, setSelectedLocation] = useState("");
     const [loading, setLoading] = useState(false);
-    const [error, setError] = useState("");
+    // const [error, setError] = useState("");
 
     const API_URL = `${import.meta.env.VITE_API_URL}/api/onboarding/location`;
 
     const handleSubmit = async () => {
         setLoading(true);
-        setError("");
+        // setError("");
 
         const accessToken = localStorage.getItem("accessToken");
         if (!accessToken) {
-            setError("Unauthorized: No access token found");
+            // setError("Unauthorized: No access token found");
             setLoading(false);
             return;
         }
@@ -47,7 +47,7 @@ export default function LocationSelection() {
                 window.location.assign('/payment')
             }, 3000)
         } catch (err: any) {
-            setError(err.message);
+            // setError(err.message);
             toast({
                 title: "Error",
                 description: err.message,

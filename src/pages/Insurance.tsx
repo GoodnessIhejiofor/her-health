@@ -7,7 +7,7 @@ export default function InsuranceSelection() {
 
     const [selectedPlan, setSelectedPlan] = useState<string>("");
     const [loading, setLoading] = useState(false);
-    const [error, setError] = useState("");
+    // const [error, setError] = useState("");
 
     const API_URL = `${import.meta.env.VITE_API_URL}/api/onboarding/insurance`;
     const accessToken = localStorage.getItem("accessToken");
@@ -21,7 +21,7 @@ export default function InsuranceSelection() {
         if (!selectedPlan) return;
 
         setLoading(true);
-        setError("");
+        // setError("");
 
         try {
             const response = await fetch(API_URL, {
@@ -52,7 +52,7 @@ export default function InsuranceSelection() {
             }, 3000)
 
         } catch (err: any) {
-            setError(err.message);
+            // setError(err.message);
             toast({
                 title: "Error",
                 description: err.message,

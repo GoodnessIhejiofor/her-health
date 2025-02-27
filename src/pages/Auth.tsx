@@ -22,7 +22,7 @@ export default function Auth() {
         });
         const [authType, setAuthType] = useState("login");
         const [loading, setLoading] = useState(false);
-        const [error, setError] = useState("");
+        // const [error, setError] = useState("");
         const toast = useToast();
 
         const API_URL = `${import.meta.env.VITE_API_URL}/api/auth`;
@@ -34,7 +34,7 @@ export default function Auth() {
         const handleSubmit = async (e: FormEvent) => {
             e.preventDefault();
             setLoading(true);
-            setError("");
+            // setError("");
 
             try {
                 const response = await fetch(`${API_URL}/${authType}`, {
@@ -74,7 +74,7 @@ export default function Auth() {
                     }, 3000);
                 }
             } catch (err: any) {
-                setError(err.message);
+                // setError(err.message);
                 toast({
                     title: "Error",
                     description: err.message,
