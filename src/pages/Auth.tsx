@@ -64,7 +64,7 @@ export default function Auth() {
                     localStorage.setItem("accessToken", data.data.accessToken);
                     toast({
                         title: "Login Successful",
-                        description: "Redirecting to dashboard...",
+                        description: "Redirecting to onboarding...",
                         status: "success",
                         duration: 3000,
                         isClosable: true,

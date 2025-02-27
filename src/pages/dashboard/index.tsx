@@ -1,4 +1,4 @@
-import { VStack, Box, SimpleGrid, Text, Image, Menu, MenuButton, MenuList, MenuItem, IconButton, useDisclosure, Modal, ModalOverlay, ModalContent, ModalHeader, ModalCloseButton, ModalBody, Avatar, Divider, Button, Table, Tr, Td, useToast } from "@chakra-ui/react";
+import { VStack, Box, SimpleGrid, Text, Image, Menu, MenuButton, MenuList, MenuItem, IconButton, useDisclosure, Modal, ModalOverlay, ModalContent, ModalHeader, ModalCloseButton, ModalBody, Avatar, Divider, Table, Tr, Td, useToast, Tbody } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
 import { FaUserMd, FaHospital, FaCalendarAlt, FaHeart, FaClipboardList, FaUserCircle } from "react-icons/fa";
 import { MdOutlineSupportAgent } from "react-icons/md";
@@ -87,7 +87,6 @@ export const MainContent = () => {
         }
 
         try {
-
             const response = await fetch(API_URL, {
                 method: "POST",
                 headers: {
@@ -110,6 +109,7 @@ export const MainContent = () => {
                 isClosable: true,
             });
 
+            setLoading(false)
         } catch (err: any) {
             toast({
                 title: "Error",
@@ -174,38 +174,40 @@ export const MainContent = () => {
                                 <Text fontSize="lg" fontWeight="bold">Dr. John Doe</Text>
                                 <Divider />
                                 <Table w={"full"}>
-                                    <Tr>
-                                        <Td>
-                                            Specialization:
-                                        </Td>
-                                        <Td>
-                                            Cardiology
-                                        </Td>
-                                    </Tr>
-                                    <Tr>
-                                        <Td>
-                                            Hospital:
-                                        </Td>
-                                        <Td>
-                                            {location} General Hospital
-                                        </Td>
-                                    </Tr>
-                                    <Tr>
-                                        <Td>
-                                            Years of Experience:
-                                        </Td>
-                                        <Td>
-                                            15
-                                        </Td>
-                                    </Tr>
-                                    <Tr>
-                                        <Td>
-                                            Contact:
-                                        </Td>
-                                        <Td>
-                                            johndoe@example.com
-                                        </Td>
-                                    </Tr>
+                                    <Tbody>
+                                        <Tr>
+                                            <Td>
+                                                Specialization:
+                                            </Td>
+                                            <Td>
+                                                Cardiology
+                                            </Td>
+                                        </Tr>
+                                        <Tr>
+                                            <Td>
+                                                Hospital:
+                                            </Td>
+                                            <Td>
+                                                {location} General Hospital
+                                            </Td>
+                                        </Tr>
+                                        <Tr>
+                                            <Td>
+                                                Years of Experience:
+                                            </Td>
+                                            <Td>
+                                                15
+                                            </Td>
+                                        </Tr>
+                                        <Tr>
+                                            <Td>
+                                                Contact:
+                                            </Td>
+                                            <Td>
+                                                johndoe@example.com
+                                            </Td>
+                                        </Tr>
+                                    </Tbody>
                                 </Table>
                                 <CustomButton mt={4}>Book an Appointment</CustomButton>
                             </VStack>
@@ -260,31 +262,33 @@ export const MainContent = () => {
                                 <Divider />
 
                                 <Table>
-                                    <Tr>
-                                        <Td>
-                                            Coverage:
-                                        </Td>
-                                        <Td>
-                                            3 Tests / year
-                                        </Td>
-                                    </Tr>
-                                    <Tr>
-                                        <Td>
-                                            Medications:
-                                        </Td>
-                                        <Td>
-                                            {(insurancePlan === "24-months") ? "Yes" : "No"}
-                                        </Td>
-                                    </Tr>
-                                    <Tr>
-                                        <Td>
-                                            Surgeries:
-                                        </Td>
-                                        <Td>
-                                            {(insurancePlan === "24-months") ? "Yes" : "No"}
+                                    <Tbody>
+                                        <Tr>
+                                            <Td>
+                                                Coverage:
+                                            </Td>
+                                            <Td>
+                                                3 Tests / year
+                                            </Td>
+                                        </Tr>
+                                        <Tr>
+                                            <Td>
+                                                Medications:
+                                            </Td>
+                                            <Td>
+                                                {(insurancePlan === "24-months") ? "Yes" : "No"}
+                                            </Td>
+                                        </Tr>
+                                        <Tr>
+                                            <Td>
+                                                Surgeries:
+                                            </Td>
+                                            <Td>
+                                                {(insurancePlan === "24-months") ? "Yes" : "No"}
 
-                                        </Td>
-                                    </Tr>
+                                            </Td>
+                                        </Tr>
+                                    </Tbody>
                                 </Table>
                                 <CustomButton mt={4}>Pay Now</CustomButton>
                             </VStack>
@@ -299,14 +303,16 @@ export const MainContent = () => {
                         <ModalCloseButton />
                         <ModalBody>
                             <Table variant="simple">
-                                <Tr>
-                                    <Td fontWeight="bold">Email</Td>
-                                    <Td>support@herhealth.info</Td>
-                                </Tr>
-                                <Tr>
-                                    <Td fontWeight="bold">Phone</Td>
-                                    <Td>+123 456 7890</Td>
-                                </Tr>
+                                <Tbody>
+                                    <Tr>
+                                        <Td fontWeight="bold">Email</Td>
+                                        <Td>support@herhealth.info</Td>
+                                    </Tr>
+                                    <Tr>
+                                        <Td fontWeight="bold">Phone</Td>
+                                        <Td>+123 456 7890</Td>
+                                    </Tr>
+                                </Tbody>
                             </Table>
                         </ModalBody>
                     </ModalContent>
@@ -323,7 +329,7 @@ export const MainContent = () => {
                                 <Text mt={4} fontSize="md" fontWeight="bold">
                                     In the next month (as stated in the calendar), you will receive your appointment details via email.
                                 </Text>
-                                <CustomButton mt={4} onClick={() => sendEmail()}>Send Test Email</CustomButton>
+                                <CustomButton isLoading={loading} loadingText="Please wait..." mt={4} onClick={() => sendEmail()}>Send Test Email</CustomButton>
                             </VStack>
                         </ModalBody>
                     </ModalContent>
