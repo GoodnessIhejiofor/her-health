@@ -180,7 +180,7 @@ export const MainContent = () => {
                                                 Specialization:
                                             </Td>
                                             <Td>
-                                                Cardiology
+                                                Gyneocologist
                                             </Td>
                                         </Tr>
                                         <Tr>
@@ -209,7 +209,7 @@ export const MainContent = () => {
                                         </Tr>
                                     </Tbody>
                                 </Table>
-                                <CustomButton mt={4}>Book an Appointment</CustomButton>
+                                <CustomButton mt={4}>Contact your doctor via email</CustomButton>
                             </VStack>
                         </ModalBody>
                     </ModalContent>
