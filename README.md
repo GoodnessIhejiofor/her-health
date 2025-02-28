@@ -13,7 +13,7 @@ This project (HER HEALTH) is designed to provide a comprehensive health manageme
 6. User Support and Feedback 
 
 ## 🔗 GitHub Repositories
-- **Backend Repository**: (https://github.com/GoodnessIhejiofor/her-health-backend)
+- **Backend Repository**: (https://github.com/GoodnessIhejiofor/her-health-backend-repo)
 - **Frontend Repository**:(https://herhealth.info/)
 - **API Endpoints**: (https://api.herhealth.info/)
 
