@@ -13,8 +13,9 @@ This project (HER HEALTH) is designed to provide a comprehensive health manageme
 6. User Support and Feedback 
 
 ## 🔗 GitHub Repositories
-- **Backend Repository**: (https://github.com/GoodnessIhejiofor/her-health.git)
-- **Frontend Repository**:(https://github.com/GoodnessIhejiofor/her-health.git)
+- **Backend Repository**: (https://github.com/GoodnessIhejiofor/her-health-backend)
+- **Frontend Repository**:(https://herhealth.info/)
+- **API Endpoints**: (https://api.herhealth.info/)
 
 ## Setting Up the Environment and the Project
 
@@ -22,12 +23,12 @@ This project (HER HEALTH) is designed to provide a comprehensive health manageme
 - Visual studio code (for backend)
 - Node.js
 - React.js (for the frontend)
-- Docker (for containerization - in view)
+-Name cheap (SQL and email service provider)
 
 ### Backend 
 1. Clone the backend repository:
    ```bash
-   git clone https://github.com/GoodnessIhejiofor/her-health.git
+   git clone https://github.com/GoodnessIhejiofor/her-health-backend-repo.git
    cd her-health
    ```
 
@@ -83,10 +84,11 @@ Screen shot of some app interfaces
 ![alt text](image-1.png)
 <!-- ![alt text](image-3.png) -->
 ![alt text](image.png)
+![alt text](image-4.png)
 
-### Deployment Plan (In-view)
+### Deployment Plan (https://herhealth.info/)
 
-Deployment will be done via netlify after testing and continous integration is done.
+Deployment has been done after testing and continous integration is done.
 
 
 
