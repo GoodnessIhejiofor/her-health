@@ -209,7 +209,7 @@ export const MainContent = () => {
                                         </Tr>
                                     </Tbody>
                                 </Table>
-                                <CustomButton mt={4}>Contact your doctor via email</CustomButton>
+                                <CustomButton mt={4}>Contact doctor via Email</CustomButton>
                             </VStack>
                         </ModalBody>
                     </ModalContent>
@@ -290,7 +290,7 @@ export const MainContent = () => {
                                         </Tr>
                                     </Tbody>
                                 </Table>
-                                <CustomButton mt={4}>Pay Now</CustomButton>
+                                <CustomButton mt={4}>Pay Now<><li>https://dashboard.paystack.com/?source=post_page---------------------------#/login</li></></CustomButton>
                             </VStack>
                         </ModalBody>
                     </ModalContent>
