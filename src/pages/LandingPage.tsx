@@ -288,12 +288,12 @@ const Footer = () => {
                         </Heading>
                         <Text>123 Medical Center Dr.</Text>
                         <Text>Healthville, HV 12345</Text>
-                        <Text>contact@healthcare.com</Text>
+                        <Text>contact@herhealth.com</Text>
                         <Text>(555) 123-4567</Text>
                     </VStack>
                 </SimpleGrid>
                 <Text mt={{ base: 8, md: 12 }} textAlign="center">
-                    © {new Date().getFullYear()} HealthCare. All rights reserved.
+                    © {new Date().getFullYear()} HerHealth. All rights reserved.
                 </Text>
             </Container>
         </Box>

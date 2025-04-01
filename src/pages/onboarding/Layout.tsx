@@ -44,7 +44,6 @@ export const OnboardingLayout: React.FC<OnboardingLayoutProps> = ({
   children,
 }) => {
   const bgColor = useColorModeValue("white", "gray.800")
-//   const borderColor = useColorModeValue("gray.200", "gray.700")
 
   return (
     <ScaleFade in={true} initialScale={0.9}>

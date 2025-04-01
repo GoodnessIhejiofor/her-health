@@ -5,6 +5,7 @@ import { MdOutlineSupportAgent } from "react-icons/md";
 import { CustomButton } from "../../components/common/common";
 import Calendar from "react-calendar";
 import 'react-calendar/dist/Calendar.css';
+import { DashboardLayout } from "./Layout";
 
 const menuItems = [
     { icon: FaUserMd, label: "My Doctor", action: "openDoctorProfile" },
@@ -65,6 +66,11 @@ export const MainContent = () => {
                 }
             });
 
+            if (response.status === 401) {
+                window.location.assign("/login");
+                return;
+              }
+
             const data = await response.json();
 
             if (!response.ok) {
@@ -95,6 +101,11 @@ export const MainContent = () => {
                 }
             });
 
+            if (response.status === 401) {
+                window.location.assign("/login");
+                return;
+            }
+
             const data = await response.json();
 
             if (!response.ok) {
@@ -124,29 +135,9 @@ export const MainContent = () => {
     };
 
     return (
-        <>
-            <Box w="full" p={4} bg="white" boxShadow="md" display="flex" justifyContent="flex-end">
-                <Menu>
+        <DashboardLayout>
 
-                    <MenuButton as={IconButton} icon={<FaUserCircle size={24} />} variant="ghost" />
-                    <MenuList>
-                        <MenuItem onClick={() => window.location.assign("/dashboard/profile")}>Profile</MenuItem>
-                        <MenuItem onClick={() => {
-                            localStorage.removeItem("accessToken");
-                            setTimeout(() => {
-                                window.location.assign('/')
-                            }, 1500)
-                        }}>Logout</MenuItem>
-                    </MenuList>
-                </Menu>
-            </Box>
-
-            <VStack w="100vw" h="100vh" display="flex" justifyContent="start" alignItems="center" p={4}>
-
-                <Box textAlign="center" mb={6}>
-                    <Image m={"auto"} src="./logo.jpg" width="150px" />
-                    <Text fontSize="xl" fontWeight="bold" mt={2}>Welcome to your Dashboard!</Text>
-                </Box>
+            <VStack display="flex" justifyContent="start" alignItems="center" p={4}>
 
                 <Box
                     p={6}>
@@ -172,7 +163,7 @@ export const MainContent = () => {
                         <ModalCloseButton />
                         <ModalBody>
                             <VStack spacing={4} textAlign="center">
-                                <Avatar size="xl" name="Dr. John Doe" src="/doctor.jpg" />
+                                <Avatar size="xl" name="Dr. John Doe" src="/doctor.png" />
                                 <Text fontSize="lg" fontWeight="bold">Dr. John Doe</Text>
                                 <Divider />
                                 <Table w={"full"}>
@@ -337,6 +328,6 @@ export const MainContent = () => {
                     </ModalContent>
                 </Modal>
             </VStack>
-        </>
+        </DashboardLayout>
     );
 };

@@ -8,6 +8,7 @@ import PaymentSelection from './pages/onboarding/Payment'
 import { MainContent } from './pages/dashboard'
 import LandingPage from './pages/LandingPage'
 import Profile from './pages/dashboard/Profile'
+import Logout from './pages/dashboard/Logout'
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         {/* <Navbar /> */}
         <Route path="/" element={<LandingPage />} />
         <Route path="/login" element={<Auth />} />
+        <Route path="/logout" element={<Logout />} />
         <Route path="/health-profile" element={<HealthProfile />} />
         <Route path="/insurance" element={<InsuranceSelection />} />
         <Route path="/location" element={<LocationSelection />} />
