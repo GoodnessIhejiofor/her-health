@@ -127,8 +127,10 @@ export const MainContent = () => {
         <>
             <Box w="full" p={4} bg="white" boxShadow="md" display="flex" justifyContent="flex-end">
                 <Menu>
+
                     <MenuButton as={IconButton} icon={<FaUserCircle size={24} />} variant="ghost" />
                     <MenuList>
+                        <MenuItem onClick={() => window.location.assign("/dashboard/profile")}>Profile</MenuItem>
                         <MenuItem onClick={() => {
                             localStorage.removeItem("accessToken");
                             setTimeout(() => {
@@ -180,7 +182,7 @@ export const MainContent = () => {
                                                 Specialization:
                                             </Td>
                                             <Td>
-                                                Cardiology
+                                                Oncology
                                             </Td>
                                         </Tr>
                                         <Tr>

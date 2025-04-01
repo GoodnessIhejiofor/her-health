@@ -113,7 +113,7 @@ export default function Auth() {
                                     <Input placeholder="+2347012345678" type="tel" name="phone" onChange={handleChange} />
                                 </FormControl>
                             )}
-                            <FormControl isRequired>
+                            <FormControl isRequired mb={4}>
                                 <FormLabel>Password</FormLabel>
                                 <Input placeholder="********" type="password" name="password" onChange={handleChange} />
                             </FormControl>
